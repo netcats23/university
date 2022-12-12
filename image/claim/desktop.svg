@@ -1,0 +1,12 @@
+<svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M40.89 35.7342H10.9085C9.8106 35.7342 8.88159 34.8052 8.88159 33.7073V15.465C8.88159 14.3671 9.8106 13.4381 10.9085 13.4381H40.9744C42.0723 13.4381 43.0013 14.3671 43.0013 15.465V33.7073C42.9169 34.8052 41.9879 35.7342 40.89 35.7342Z" fill="white"/>
+<path d="M40.89 35.7342H10.9085C9.8106 35.7342 8.88159 34.8052 8.88159 33.7073V15.465C8.88159 14.3671 9.8106 13.4381 10.9085 13.4381H40.9744C42.0723 13.4381 43.0013 14.3671 43.0013 15.465V33.7073C42.9169 34.8052 41.9879 35.7342 40.89 35.7342Z" fill="#B0B0B0" stroke="#B0B0B0" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M38.1022 37.5923H13.6104V39.5347H38.1022V37.5923Z" fill="#B0B0B0" stroke="#B0B0B0" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M40.6601 15.8769H11.1165C10.5642 15.8769 10.1165 16.3246 10.1165 16.8769V29.878C10.1165 30.192 10.2639 30.4878 10.5148 30.6768L11.5378 31.4474C11.7112 31.5781 11.9224 31.6487 12.1395 31.6487H39.5283C39.7336 31.6487 39.9339 31.5856 40.102 31.4678L41.2337 30.6753C41.5009 30.4881 41.6601 30.1824 41.6601 29.8562V16.8769C41.6601 16.3246 41.2124 15.8769 40.6601 15.8769Z" fill="#DFDFDF" stroke="#DFDFDF" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.8064 22.1228L22.1083 19.1632" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.4971 29.8168L18.6354 23.6516" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M18.0437 28.2966L16.9458 29.8168" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M25.0696 18.5055L19.4792 26.3978" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="22.0537" y="33.392" width="7.5499" height="1.63074" rx="0.815369" fill="#AB3326" stroke="#AB3326"/>
+<rect x="0.5" y="0.5" width="51" height="51" rx="25.5" stroke="#949191"/>
+</svg>

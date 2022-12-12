@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+<head>
+<title>Page - Профиль</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="description">
+
+<link href="./css/preloader.css" type="text/css" rel="stylesheet">
+<script>
+  window.onload = function() {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 1000);
+  }
+</script>
+
+<link href="./lib/icomoon/style.css?1670792830168" type="text/css" rel="stylesheet">
+<link href="./lib/uikit/css/uikit.min.css" type="text/css" rel="stylesheet">
+
+<link href="./lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="./lib/tiny.slider/tiny-slider.css" type="text/css" rel="stylesheet">
+<link href="./lib/fancybox/fancybox.css" type="text/css" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/ui-kit.css?1670792830168">
+<link rel="stylesheet" href="./css/common.css?1670792830168">
+</head>
+
+<body class="body" data-tour-step>
+<noscript><div class="noscript">Для полноценной работы сайта, необходимо включить JavaScript!</div></noscript>
+
+<script>
+(function() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'image/sprite.svg?1670792830168', true);
+  xhr.send();
+  xhr.onload = function() {
+    const div = document.createElement('div');
+    div.className = 'visually-hidden';
+    div.innerHTML = xhr.responseText;
+    document.body.insertBefore(div, document.body.childNodes[0]);
+  }
+})();
+</script>
+
+
+<div class="wrapper" id="profile">
+  <div class="container-fluid">
+    <div class="title-row">
+      <div class="col">
+        <h1>Профиль</h1>
+      </div>
+
+      <div class="col-auto">
+        <div class="control-buttons">
+          <a href="#" class="ui-button3 ui-button3--variant">Редактировать</a>
+          <a href="#" class="ui-button3 ui-button3--variant">Пароли</a>
+          <a href="#" class="ui-button3 ui-button3--variant">Безопасность</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">
+        <div class="ui-tab-block ui-block">
+          <ul class="ui-tab">
+            <li><a href="#" class="active">Профиль</a></li>
+
+            <li><a href="./calendar.html">Календарь</a></li>
+
+            <li><a href="#">Мои задачи</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-5">
+        <div class="ui-block profile-card">
+          <div class="block-content">
+            <div class="profile-info">
+              <div class="ava-block">
+                <div class="label"><span>до 19.09 в отпуске</span></div>
+
+                <div class="pic">
+                  <img src="./image/tmp/avatar.png" alt="" />
+                </div>
+              </div>
+
+              <div class="profile-name">Томас Андерсон</div>
+
+              <div class="profile-desc">Дизайнер</div>
+            </div>
+
+            <div class="medals-row">
+              <div class="item" data-tippy-content="Лучший сотрудник месяца" data-placement="bottom"><img src="./image/medal1.png" class="medal" /></div>
+
+              <div class="item" data-tippy-content="Лучший сотрудник года" data-placement="bottom"><img src="./image/medal2.png" class="medal" /></div>
+
+              <div class="item" data-tippy-content="Ночной работник" data-placement="bottom"><img src="./image/medal3.png" class="medal" /></div>
+
+              <a href="./medals.html" class="item all js-medals" data-tippy-content="Все награды" data-placement="bottom">+5</a>
+            </div>
+          </div>
+
+          <a href="#" class="block-foot ui-button1">написать сообщение<span class="ico icon-chat"></span></a>
+        </div>
+
+
+        <div class="profile-progress ui-block">
+          <div class="block-head">
+            <div class="title">Прогресс развития</div>
+          </div>
+
+          <div class="profile-progress__content block-content">
+            <div class="progress-pie">
+
+              <div class="progress-pie__circle ui-pie ui-pie--percent" data-pie="50" data-pie-fill="var(--red)" data-pie-track="var(--brd)">
+                <span class="ui-pie__label">прогресс</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="#" class="block-foot ui-button1"> план развития<span class="ico icon-button-arrow"></span> </a>
+        </div>
+
+
+        <div class="ui-block profile-balance">
+          <div class="block-content">
+            <img src="./image/balance-coin.svg" />
+
+            <div class="balance-amount">350</div>
+
+            <div class="balance-desc">Мой баланс</div>
+          </div>
+
+          <a href="#" class="block-foot ui-button1">как заработать баллы?<span class="ico icon-button-arrow"></span></a>
+        </div>
+      </div>
+
+      <div class="col-7">
+        <div class="ui-block">
+          <div class="block-head">
+            <div class="title">Информация о сотруднике</div>
+          </div>
+
+          <div class="block-content">
+            <div class="table-props">
+              <div class="item">
+                <div class="title">филиал</div>
+
+                <div class="content">Калининградский филиал</div>
+              </div>
+
+              <div class="item">
+                <div class="title">отдел</div>
+
+                <div class="content">отдел дизайна и внешних коммуникаций с клиентами</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-block">
+          <div class="block-head">
+            <div class="title">Общие данные</div>
+          </div>
+
+          <div class="block-content">
+            <div class="table-props">
+              <div class="item">
+                <div class="title">дата рождения</div>
+
+                <div class="content">28 июня</div>
+              </div>
+
+              <div class="item">
+                <div class="title">город</div>
+
+                <div class="content">Калининград</div>
+              </div>
+
+              <div class="item">
+                <div class="title">email</div>
+
+                <div class="content"><a href="mailto:mail@example.com">mail@example.com</a></div>
+              </div>
+
+              <div class="item">
+                <div class="title">рабочий телефон</div>
+
+                <div class="content"><a href="mailto:+71234567890">+7 123 456 78 90</a></div>
+              </div>
+
+              <div class="item">
+                <div class="title">мобильный телефон</div>
+
+                <div class="content"><a href="mailto:+71234567890">+7 123 456 78 90</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ui-block">
+          <div class="block-head">
+            <div class="title">Отдел</div>
+          </div>
+
+          <div class="block-content">
+            <div class="sub-title">Руководители</div>
+
+            <div class="profile-director">
+              <a href="#" class="item">
+                <div class="ui-ava">
+                  <img src="./image/tmp/ava4.png" alt="" />
+                </div>
+
+                <div class="content">
+                  <div class="name">Роман Константинов</div>
+                  <div class="position">Глава отдела</div>
+                </div>
+              </a>
+
+              <a href="#" class="item">
+                <div class="ui-ava">
+                  <img src="./image/tmp/ava4.png" alt="" />
+                </div>
+
+                <div class="content">
+                  <div class="name">Роман Константинов</div>
+
+
+                  <div class="position">Бухгалтер</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="sub-title">Сотрудники отдела</div>
+
+            <div class="pic-text-table">
+              <a href="#" class="item">
+                <div class="content">
+                  <div class="ui-ava">
+                    <img src="./image/tmp/ava4.png" alt="" />
+                  </div>
+
+                  <div class="name">Роман Константинов</div>
+                </div>
+
+                <div class="position">Бухгалтер</div>
+              </a>
+
+              <a href="#" class="item">
+                <div class="content">
+                  <div class="ui-ava">
+                    <img src="./image/tmp/ava4.png" alt="" />
+                  </div>
+
+                  <div class="name">Роман Константинов</div>
+                </div>
+
+                <div class="position">Бухгалтер</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+<script src="./js/jquery.mask.min.js"></script>
+<script src="./lib/uikit/js/uikit.min.js"></script>
+<script src="./lib/uikit/js/uikit-icons.min.js"></script>
+
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/tiny.slider/tiny-slider.js"></script>
+<script src="./lib/fancybox/fancybox.umd.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+
+<script src="./lib/tippy/tippy_custom.js"></script>
+<script src="https://unpkg.com/@googlemaps/markerwithlabel/dist/index.min.js"></script>
+
+<script src="./js/common.js?1670792830168"></script>
+<script src="./js/init-add-script-logic.js?1670792830168"></script>
+<script src="./js/init-add-skill-logic.js?1670792830168"></script>
+<script src="./js/init-custom-selectmenu.js?1670792830168"></script>
+<script src="./js/init-compliance-questions-adding.js?1670792830168"></script>
+
+</body>
+</html>
+

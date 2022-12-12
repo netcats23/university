@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+<head>
+<title>Page - Главная</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="description">
+
+<link href="./css/preloader.css" type="text/css" rel="stylesheet">
+<script>
+  window.onload = function() {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 1000);
+  }
+</script>
+
+<link href="./lib/icomoon/style.css?1670792830168" type="text/css" rel="stylesheet">
+<link href="./lib/uikit/css/uikit.min.css" type="text/css" rel="stylesheet">
+
+<link href="./lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="./lib/tiny.slider/tiny-slider.css" type="text/css" rel="stylesheet">
+<link href="./lib/fancybox/fancybox.css" type="text/css" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/ui-kit.css?1670792830168">
+<link rel="stylesheet" href="./css/common.css?1670792830168">
+</head>
+
+<body class="body" data-tour-step>
+<noscript><div class="noscript">Для полноценной работы сайта, необходимо включить JavaScript!</div></noscript>
+
+<script>
+(function() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'image/sprite.svg?1670792830168', true);
+  xhr.send();
+  xhr.onload = function() {
+    const div = document.createElement('div');
+    div.className = 'visually-hidden';
+    div.innerHTML = xhr.responseText;
+    document.body.insertBefore(div, document.body.childNodes[0]);
+  }
+})();
+</script>
+
+
+<div class="wrapper">
+  <div class="preloader js-preloader">
+  <div class="line">
+      <div class="content"></div>
+  </div>
+
+  <div class="content">
+      <img src="./image/logo.svg" alt="" title="">
+      <div class="desc">Загружаем данные...</div>
+  </div>
+</div>
+
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="left-controls">
+      <div class="hamburger js-aside-control">
+        <span class="icon-hamburger"></span>
+      </div>
+
+      <a href="/" class="logo">
+        <img src="./image/logo.svg" alt="" title="">
+      </a>
+    </div>
+
+    <div class="search">
+      <form action="#" class="search-form">
+        <input type="text" placeholder="Искать...">
+        <input type="submit" class="submit" value="Искать">
+      </form>
+    </div>
+
+
+    <div class="right-controls">
+        <div class="socials-links">
+          <a href="#" target="_blank" class="instagram">
+            <span class="ico icon-instagram"></span>
+          </a>
+
+          <a href="#" target="_blank" class="youtube">
+            <span class="ico icon-youtube"></span>
+          </a>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="personal-buttons">
+          <div class="item" data-tippy-content="Избранное" data-placement="bottom"  data-offset="0,8">
+            <div class="favorite" >
+                <span class="ico icon-fav"></span>
+            </div>
+          </div>
+
+          <div class="item" data-tippy-content="Поддержка" data-placement="bottom"  data-offset="0,8">
+              <div class="questions">
+                <span class="ico icon-question"></span>
+              </div>
+          </div>
+
+          <div class="item" data-tippy-content="Чат" data-placement="bottom" data-offset="0,8">
+            <div class="messages">
+              <span class="ico icon-chat"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="personal-card js-tippy" data-template="profile"  data-theme="eos-light" data-offset="0,-5">
+          <div class="ui-pic">
+            <img src="./image/tmp/avatar.png" class="avatar" alt="Аватар">
+          </div>
+
+          <div class="card-content">
+            <div class="name"><span>Томас Андерсон</span><span class="ico icon-caret"></span></div>
+            <div class="holiday">60 дней до отпуска</div>
+          </div>
+        </div>
+
+        <div id="profile"  style="display:none">
+          <ul class="profile-dropdown ui-dropdown-menu">
+              <li><a href="./profile.html">Моя страница</a></li>
+              <li><a href="#">Выйти</a></li>
+          </ul>
+        </div>
+
+      <div class="notifications">
+        <span class="ico icon-notification"></span>
+        <div class="count">22</div>
+      </div>
+
+    </div>
+  </header>
+  <!-- #HEADER -->
+
+  <!-- ASIDE -->
+  <aside class="ui-scrolling open" id="js-aside">
+    <ul class="aside-menu">
+      <li>
+        <a href="./index.html" class="active">
+          <span class="ico icon-aside-main" data-tippy-content="Главная" data-placement="right" data-offset="0,8"></span>
+          <span class="menu-text">Главная</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./news.html">
+          <span class="ico icon-aside-news" data-tippy-content="Новости" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Новости</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./contacts.html" >
+          <span class="ico icon-aside-contacts" data-tippy-content="Контакты" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Контакты</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-requests" data-tippy-content="Заявки" data-placement="right" data-offset="0,8"><span class="red-ico">3</span></span>
+
+          <span class="menu-text">Заявки<span class="red-ico">3</span></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-documents" data-tippy-content="ЛНА/документы" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">ЛНА/документы</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-communities" data-tippy-content="Сообщества" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">
+            Банк идей
+            <span class="aside-label">Скоро</span>
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-store" data-tippy-content="EOS STORE" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">
+            EOS STORE
+            <span class="aside-label">Скоро</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sep"></div>
+
+    <a href="./university.html" class="university-button">
+      <span class="ico icon-aside-university" data-tippy-content="Университет" data-placement="right" data-offset="0,8"></span>
+      <span class="menu-text">Университет</span>
+    </a>
+
+    <div class="sep"></div>
+
+    <ul class="aside-menu">
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-projects" data-tippy-content="Мои проекты" data-placement="right" data-offset="0,8"></span>
+          <span class="menu-text">Мои проекты</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-schedule" data-tippy-content="Рабочий календарь" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Рабочий календарь</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sep"></div>
+
+    <ul class="aside-menu">
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-about" data-tippy-content="О компании" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">О компании</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-media" data-tippy-content="Фото и видео" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Фото и видео</span>
+        </a>
+      </li>
+
+      <li>
+        <ul class="aside-menu">
+          <li>
+            <a href="#">
+              <span class="ico icon-aside-branch" data-tippy-content="Филиалы" data-placement="right" data-offset="0,8"></span>
+
+              <span class="menu-text">Филиалы</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="ico icon-aside-staff" data-tippy-content="Сотрудники" data-placement="right" data-offset="0,8"></span>
+
+              <span class="menu-text">Сотрудники</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sep"></div>
+
+        <ul class="aside-menu">
+          <li>
+            <a href="#">
+              <span class="ico icon-aside-ideas" data-tippy-content="Сотрудники" data-placement="right" data-offset="0,8"></span>
+
+              <span class="menu-text">Доска идей</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="js-menu-extended open" data-text="Развернуть">
+        <a href="javascript:void(0)">
+          <span class="ico icon-aside-extend js-extended-tippy" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text js-extended-text">Свернуть<span class="red-ico icon-caret"></span></span>
+        </a>
+      </li>
+    </ul>
+
+    <a class="callback-button js-callback" href="#modal-callback" data-bs-toggle="modal" data-tippy-content="Задайте вопрос" data-placement="right" data-offset="0,15"></a>
+  </aside>
+  <!-- #ASIDE -->
+
+  <!-- MODAL CALLBACK -->
+  
+  <div class="ui-modal modal fade" id="modal-callback" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+      <div class="ui-modal__block modal-content">
+        <button type="button" class="ui-modal__close" data-bs-dismiss="modal" aria-label="Close">
+          <svg><use xlink:href="#icn-close" /></svg>
+        </button>
+
+
+        <form action="#" class="callback-form">
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="topic">Кому хотите написать?</label>
+
+            <select name="" id="" class="ui-select">
+              <option default value="">Выберите адресата</option>
+              <option value="Генеральному директору">Генеральному директору</option>
+              <option value="Бухгалтерия">Бухгалтерия</option>
+            </select>
+          </div>
+
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="topic">Тема сообщения</label>
+
+            <input class="ui-input" type="text" id="topic" name="topic" placeholder="Укажите тему" />
+            <!-- класс error для ошибки -->
+          </div>
+
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="message">Текст сообщения</label>
+
+            <textarea class="ui-input" type="text" id="message" name="message" placeholder="Текст сообщения"></textarea>
+            <!-- класс error для ошибки -->
+          </div>
+
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="forward">Кому ответить</label>
+
+            <input class="ui-input" type="text" id="forward" name="forward" placeholder="Укажите email" />
+            <!-- класс error для ошибки -->
+          </div>
+
+          <div class="ui-input-block">
+            <div class="ui-input-label">Приоритет сообщения</div>
+
+            <div class="radio-row">
+              <div class="ui-radio">
+                <input type="radio" id="prior1" name="priority" value="Неважно" />
+
+                <label for="prior1">Неважно</label>
+              </div>
+
+              <div class="ui-radio">
+                <input type="radio" id="prior2" name="priority" value="Средне" />
+
+                <label for="prior2">Средне</label>
+              </div>
+
+              <div class="ui-radio">
+                <input type="radio" id="prior3" name="priority" value="Важно" />
+
+                <label for="prior3">Важно</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="callback-row">
+            <label class="ui-ctl ui-ctl-file-btn ui-file">
+              <input type="file" class="ui-ctl-element" />
+
+              <div class="ui-ctl-label-text">Прикрепить файл</div>
+            </label>
+
+            <div class="ui-button2">Отправить сообщение</div>
+          </div>
+        </form>
+
+        <!--
+        <div class="success-callback">
+          <img src="./image/success.svg" alt="Успешно" />
+          <div class="title">Спасибо большое за&nbsp;сообщение! Мы&nbsp;постараемся ответить вам в&nbsp;ближайшее&nbsp;время</div>
+          <div class="ui-button2">понятно</div>
+        </div>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- #MODAL CALLBACK -->
+
+
+  <main class="page-index">
+      <div class="row row-8">
+          <div class="col-12">
+              <div class="short-slider ui-block">
+                <div class="ui-slider" id="js-short-slider">
+                  <div class="slider-container js-slider-container">
+                    <div>
+                      <div class="slider-item">
+                        <div class="label">Новая вакансия</div>
+
+                        <a href="#" class="content"> Ищем разработчика на Битриксе </a>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="slider-item">
+                        <div class="label">Новая вакансия</div>
+
+                        <a href="#" class="content"> Lorem ipsum dolor sit amet, consectetur adipiscing elit </a>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="slider-prev"><span class="ico icon-button-arrow"></span></div>
+
+                  <div class="slider-next"><span class="ico icon-button-arrow"></span></div>
+                </div>
+              </div>
+
+          </div>
+      </div>
+
+      <div class="row row-8 row-aligner">
+          <div class="col-8 ">
+              <div class="ui-block news-block">
+                <div class="block-head">
+                  <ul class="news-tab" uk-switcher="connect: #news-tabs">
+                    <li><a href="#">Новости компании</a></li>
+
+                    <li><a href="#">Новости бизнеса</a></li>
+                  </ul>
+                </div>
+
+                <div class="block-content">
+                  <div class="uk-switcher" id="news-tabs">
+                    <div>
+                      <div class="pic" style="background-image: url(./image/tmp/news-tab1.jpg)"></div>
+
+                      <div class="card-content">
+                        <div>
+                          <div class="labels">
+                            <div class="date">28 июля 2021</div>
+
+                            <div class="live">live</div>
+                          </div>
+
+                          <div class="title">Прямая трансляция с церемонии награждения</div>
+
+                          <div class="desc">Выбираем лучших сотрудников года</div>
+                        </div>
+
+                        <div class="ui-button2">Смотреть<span class="ico icon-play"></span></div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="pic"></div>
+
+                      <div class="card-content">
+                        <div>
+                          <div class="labels">
+                            <div class="date">28 июля 2021</div>
+                          </div>
+
+                          <div class="title">Новости бизнеса</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          <div class="col-4 col-aligner">
+              <div class="ui-block schedule-block">
+                <div class="block-head">
+                  <div class="title">Мой календарь</div>
+                </div>
+
+                <div class="block-content ui-scrolling js-scrolling">
+                  <div class="schedule-list">
+                    <a href="#" class="item soon">
+                      <div class="date">09:00</div>
+
+                      <div class="title">Планёрка с командой</div>
+                    </a>
+
+                    <a href="#" class="item soon">
+                      <div class="date">11:00</div>
+
+                      <div class="title">Обсуждение задач с руководством</div>
+                    </a>
+
+                    <a href="#" class="item">
+                      <div class="date">до 19:00</div>
+
+                      <div class="title">Заполнить таблицу по кандидатам</div>
+                    </a>
+
+                    <a href="#" class="item">
+                      <div class="date">до 19:00</div>
+
+                      <div class="title">Собрать презентацию для показа руководству</div>
+                    </a>
+
+                    <a href="#" class="item soon">
+                      <div class="date">09:00</div>
+
+                      <div class="title">Планёрка с командой</div>
+                    </a>
+
+                    <a href="#" class="item soon">
+                      <div class="date">11:00</div>
+
+                      <div class="title">Обсуждение задач с руководством</div>
+                    </a>
+
+                    <a href="#" class="item">
+                      <div class="date">до 19:00</div>
+
+                      <div class="title">Заполнить таблицу по кандидатам</div>
+                    </a>
+
+                    <a href="#" class="item">
+                      <div class="date">до 19:00</div>
+
+                      <div class="title">Собрать презентацию для показа руководству</div>
+                    </a>
+                  </div>
+                </div>
+
+                <!-- <a href="#" class="block-foot ui-button1"> Перейти в расписание<span class="ico icon-button-arrow"></span> </a> -->
+              </div>
+
+              <div class="ui-block tasks-block">
+                <div class="block-head">
+                  <div class="title">Мои задачи</div>
+                </div>
+
+                <div class="block-content ui-scrolling js-scrolling">
+                  <div class="tasks-block__list">
+                    <a href="#" class="tasks-block__item">
+                      <div class="tasks-block__title">Делаю</div>
+                      <div class="tasks-block__stat">
+                        <span class="task-block__stat-all ui-badge ui-badge--size-small">6</span>
+                        <span class="task-block__stat-important ui-badge ui-badge--size-small ui-badge--important">3</span>
+                      </div>
+                    </a>
+                      <a href="#" class="tasks-block__item">
+                        <div class="tasks-block__title">Делаю</div>
+                        <div class="tasks-block__stat">
+                          <span class="task-block__stat-all ui-badge ui-badge--size-small">6</span>
+                          <span class="task-block__stat-important ui-badge ui-badge--size-small ui-badge--important">3</span>
+                        </div>
+                      </a>
+<a href="#" class="tasks-block__item">
+                        <div class="tasks-block__title">Помогаю</div>
+                        <div class="tasks-block__stat">
+                          <span class="task-block__stat-all ui-badge ui-badge--size-small">3</span>
+                          <span class="task-block__stat-important ui-badge ui-badge--size-small ui-badge--important">0</span>
+                        </div>
+                      </a>
+<a href="#" class="tasks-block__item">
+                        <div class="tasks-block__title">Поручил</div>
+                        <div class="tasks-block__stat">
+                          <span class="task-block__stat-all ui-badge ui-badge--size-small">0</span>
+                          <span class="task-block__stat-important ui-badge ui-badge--size-small ui-badge--important">0</span>
+                        </div>
+                      </a>
+<a href="#" class="tasks-block__item">
+                        <div class="tasks-block__title">Делаю</div>
+                        <div class="tasks-block__stat">
+                          
+                          <span class="task-block__stat-important ui-badge ui-badge--size-small ui-badge--important">3</span>
+                        </div>
+                      </a>
+<a href="#" class="tasks-block__item">
+                        <div class="tasks-block__title">Помогаю</div>
+                        <div class="tasks-block__stat">
+                          <span class="task-block__stat-all ui-badge ui-badge--size-small">3</span>
+                          
+                        </div>
+                      </a>
+<a href="#" class="tasks-block__item">
+                        <div class="tasks-block__title">Поручил</div>
+                        <div class="tasks-block__stat">
+                          <span class="task-block__stat-all ui-badge ui-badge--size-small">0</span>
+                          <span class="task-block__stat-important ui-badge ui-badge--size-small ui-badge--important">0</span>
+                        </div>
+                      </a>
+
+                  </div>
+                </div>
+
+                <!-- <a href="#" class="block-foot ui-button1"> Перейти в расписание<span class="ico icon-button-arrow"></span> </a> -->
+              </div>
+
+              <div class="store-block ui-block">
+                  <a href="#" class="store-block__content">
+                      <div class="store-block__title">
+                        <span class="store-block__text">СOMPANY STORE</span>
+                        <span class="store-block__badge ui-badge ui-badge--muted">Скоро</span>
+                      </div>
+                      <span class="store-block__arrow ico icon-button-arrow"></span>
+                  </a>
+              </div>
+
+          </div>
+
+          <div class="col-12">
+              <div class="slider-block ui-block">
+                <div class="ui-slider news-list" id="js-news-slider">
+                  <div class="slider-container js-slider-container">
+                    <div class="news-item">
+                      <div class="pic">
+                        <img src="./image/tmp/image1.jpg" alt="" title="" />
+                      </div>
+
+                      <div class="block-content">
+                        <div class="date">28 июля 2021</div>
+
+                        <div class="title">Вышла новая серсия подкаста</div>
+                      </div>
+
+                      <a href="" class="block-foot ui-button1"> Проголосовать<span class="ico icon-button-arrow"></span> </a>
+                    </div>
+
+                    <div class="news-item">
+                      <div class="pic">
+                        <img src="./image/tmp/image2.jpg" alt="" title="" />
+                      </div>
+
+                      <div class="block-content">
+                        <div class="title">Вышла новая серсия подкаста</div>
+                      </div>
+
+                      <a href="" class="block-foot ui-button1"> Слушать<span class="ico icon-button-arrow"></span> </a>
+                    </div>
+
+                    <div class="news-item">
+                      <div class="pic">
+                        <img src="./image/tmp/image3.jpg" alt="" title="" />
+                      </div>
+
+                      <div class="block-content">
+                        <div class="persons">
+                          <div class="item js-tippy" data-template="ava4" data-placement="top">
+                            <img src="./image/tmp/ava4.png" />
+                          </div>
+
+                          <div id="ava4" style="display: none">
+                            <div class="ui-human-card">
+                              <div class="content">
+                                <div class="pic">
+                                  <img src="./image/tmp/ava4.png" alt="" />
+                                </div>
+
+                                <a href="" class="name">Роман Константинов</a>
+
+                                <div class="position">Бухгалтер</div>
+                              </div>
+
+                              <a href="" class="ui-button1"> Перейти в профиль<span class="ico icon-button-arrow"></span> </a>
+                            </div>
+                          </div>
+
+                          <div class="item js-tippy" data-template="ava2" data-placement="top">
+                            <img src="./image/tmp/ava2.png" />
+                          </div>
+
+                          <div id="ava2" style="display: none">
+                            <div class="ui-human-card">
+                              <div class="content">
+                                <div class="pic">
+                                  <img src="./image/tmp/ava2.png" alt="" />
+                                </div>
+
+                                <a href="" class="name">Роман Константинов</a>
+
+                                <div class="position">Бухгалтер</div>
+                              </div>
+
+                              <a href="" class="ui-button1"> Перейти в профиль<span class="ico icon-button-arrow"></span> </a>
+                            </div>
+                          </div>
+
+                          <a href="" class="item more">
+                            <img src="./image/tmp/ava5.png" class="person" />
+
+                            <div class="count">+5</div>
+                          </a>
+                        </div>
+
+                        <div class="date">28 июля 2021</div>
+
+                        <div class="title">Награждение лучших сотрудников</div>
+                      </div>
+
+                      <a href="" class="block-foot ui-button1"> Проголосовать<span class="ico icon-button-arrow"></span> </a>
+                    </div>
+
+                    <div class="news-item">
+                      <div class="pic"></div>
+
+                      <div class="block-content">
+                        <div class="date">28 июля 2021</div>
+
+                        <div class="title">Etiam pretium, libero a vehicula efficitur, nisl arcu rutrum dui.</div>
+                      </div>
+
+                      <a href="" class="block-foot ui-button1"> Проголосовать<span class="ico icon-button-arrow"></span> </a>
+                    </div>
+
+                    <div class="news-item">
+                      <div class="pic">
+                        <img src="./image/tmp/image1.jpg" alt="" title="" />
+                      </div>
+
+                      <div class="block-content">
+                        <div class="date">28 июля 2021</div>
+
+                        <div class="title">Вышла новая серсия подкаста</div>
+                      </div>
+
+                      <a href="" class="block-foot ui-button1"> Читать<span class="ico icon-button-arrow"></span> </a>
+                    </div>
+
+                    <div class="news-item">
+                      <div class="pic">
+                        <img src="./image/tmp/image1.jpg" alt="" title="" />
+                      </div>
+
+                      <div class="block-content">
+                        <div class="date">28 июля 2021</div>
+
+                        <div class="title">Вышла новая серсия подкаста</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="slider-prev"><span class="ico icon-button-arrow"></span></div>
+
+                  <div class="slider-next"><span class="ico icon-button-arrow"></span></div>
+                </div>
+              </div>
+
+          </div>
+      </div>
+
+      <div class="row row-8 row-aligner">
+          <div class="col-5 col-aligner">
+              <div class="progress-block ui-block">
+                <div class="block-head">
+                  <div class="title">Прогресс развития</div>
+                </div>
+
+                <div class="progress-block__content block-content">
+                  <div class="progress-pie">
+
+                    <div class="progress-pie__circle ui-pie ui-pie--percent" data-pie="50" data-pie-fill="var(--red)" data-pie-track="var(--brd)">
+                      <span class="ui-pie__label">прогресс</span>
+                    </div>
+                  </div>
+                </div>
+
+                <a href="#" class="block-foot ui-button1"> план развития<span class="ico icon-button-arrow"></span> </a>
+              </div>
+
+              <div class="ui-block events-block">
+                <div class="block-head">
+                  <div class="title">События</div>
+
+                  <ul class="ui-tab" uk-switcher="connect: #events-tabs">
+                    <li><a href="#">Сегодня</a></li>
+
+                    <li><a href="#">Прошедшие</a></li>
+
+                    <li><a href="#">Будущие</a></li>
+                  </ul>
+                </div>
+
+                <div class="block-content ui-scrolling js-scrolling">
+                  <div class="uk-switcher" id="events-tabs">
+                    <div>
+                      <div class="human-events">
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava1.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label blue"><span class="ico icon-celebration"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name"> <span>Дмитрий Ефимов</span><span>40 лет</span> </a>
+
+                              <div class="department">HR-рекрутеры</div>
+
+                              <div class="ui-label">5 лет в компании</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava2.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label green"><span class="ico icon-plus"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name">
+                                <span>Арина Романова</span>
+                              </a>
+
+                              <div class="department">HR-рекрутеры</div>
+
+                              <div class="ui-label green">Новенькая</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava3.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label blue"><span class="ico icon-celebration"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name"> <span>Елена Новикова</span><span>31 год</span> </a>
+
+                              <div class="department">Бухгалтерия</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava4.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label green"><span class="ico icon-plus"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name">
+                                <span>Роман Варламов</span>
+                              </a>
+
+                              <div class="ui-label green">Новенький</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava1.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label blue"><span class="ico icon-celebration"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name"> <span>Дмитрий Ефимов</span><span>40 лет</span> </a>
+
+                              <div class="department">HR-рекрутеры</div>
+
+                              <div class="ui-label">5 лет в компании</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava2.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label green"><span class="ico icon-plus"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name">
+                                <span>Арина Романова</span>
+                              </a>
+
+                              <div class="department">HR-рекрутеры</div>
+
+                              <div class="ui-label green">Новенькая</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava3.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label blue"><span class="ico icon-celebration"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name"> <span>Елена Новикова</span><span>31 год</span> </a>
+
+                              <div class="department">Бухгалтерия</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+
+                        <div class="item">
+                          <div class="info-card">
+                            <div class="card-pic">
+                              <div class="ui-ava">
+                                <img src="./image/tmp/ava4.png" alt="" />
+                              </div>
+
+                              <div class="ui-round-label green"><span class="ico icon-plus"></span></div>
+                            </div>
+
+                            <div class="card-content">
+                              <a href="" class="name">
+                                <span>Роман Варламов</span>
+                              </a>
+
+                              <div class="ui-label green">Новенький</div>
+                            </div>
+                          </div>
+
+                          <div class="dropdown-button">
+                            <span class="ico icon-chat"></span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="human-events">
+                        <div class="item">Нет прошедших событий</div>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div class="human-events">
+                        <div class="item">Тут будут будущие события</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="event-dropdown" style="display: none">
+                <div class="emojji-row">
+                  <div class="emojji-radio">
+                    <label for="event-var1">
+                      <input type="radio" id="event-var1" name="event-var1" />
+
+                      🎁
+                    </label>
+                  </div>
+
+                  <div class="emojji-radio">
+                    <input type="radio" id="event-var2" name="event-var2" />
+
+                    <label for="event-var2"> 🔥 </label>
+                  </div>
+
+                  <div class="emojji-radio">
+                    <input type="radio" id="event-var3" name="event-var3" />
+
+                    <label for="event-var3"> 🎂 </label>
+                  </div>
+
+                  <div class="emojji-radio">
+                    <input type="radio" id="event-var4" name="event-var4" />
+
+                    <label for="event-var4"> 💝 </label>
+                  </div>
+                </div>
+
+                <textarea name="" id="" placeholder="Оставьте сообщение..."></textarea>
+
+                <div class="ui-button2">Поздравить</div>
+              </div>
+
+          </div>
+
+          <div class="col-7 col-aligner">
+              <div class="row row-8">
+                  <div class="col-7 col-xl-6">
+                      <div class="quiz-block ui-block">
+                        <div class="block-head">
+                          <div class="title">Где проводим корпоратив? 🎉</div>
+                        </div>
+
+                        <div class="block-content">
+                          <div class="ui-radio">
+                            <input type="radio" id="val1" name="quiz" value="Загородная база отдыха" />
+
+                            <label for="val1">Загородная база отдыха</label>
+                          </div>
+
+                          <div class="ui-radio">
+                            <input type="radio" id="val2" name="quiz" value="Ресторан" />
+
+                            <label for="val2">Ресторан</label>
+                          </div>
+
+                          <div class="ui-radio">
+                            <input type="radio" id="val3" name="quiz" value="Онлайн созвон" />
+
+                            <label for="val3">Онлайн созвон</label>
+                          </div>
+
+                          <div class="ui-radio">
+                            <input type="radio" id="val4" name="quiz" value="В офисе" />
+
+                            <label for="val4">В офисе</label>
+                          </div>
+                        </div>
+
+                        <a href="#" class="block-foot ui-button1"> Проголосовать<span class="ico icon-button-arrow"></span> </a>
+                      </div>
+
+                  </div>
+                  <div class="col-5 col-xl-6">
+                      <div class="ideas-block ui-block">
+                        <div class="block-head">
+                          <div class="title">Доска идей</div>
+                        </div>
+
+                        <div class="block-content">
+                          <div class="ideas-number">
+                            <div class="item">0</div>
+
+                            <div class="item">3</div>
+
+                            <div class="item">4</div>
+
+                            <div class="item">5</div>
+                          </div>
+
+                          <p class="text-center">Идей принято на данный момент</p>
+                        </div>
+
+                        <a href="#" class="block-foot ui-button1"> Подать идею<span class="ico icon-button-arrow"></span> </a>
+                      </div>
+
+                  </div>
+              </div>
+
+              <div class="row row-8">
+                  <div class="col-12">
+                      <div class="best-block ui-block">
+                        <div class="block-head head-row">
+                          <div class="title">Лучшие сотрудники <a href="#" class="round-title-plus"></a></div>
+
+                          <div class="sort">
+                            <div class="item js-tippy" data-template="best-sort-1" data-placement="bottom" data-trigger="click" data-theme="eos-light" data-offset="0,10">
+                              в Москве<span class="ico icon-arrow-icon"></span>
+                            </div>
+
+                            <div id="best-sort-1" style="display: none">
+                              <ul class="sort-dropdown ui-dropdown-menu">
+                                <li><a href="#" class="active">По России</a></li>
+
+                                <li><a href="#">В Москве</a></li>
+                              </ul>
+                            </div>
+
+                            <div class="item js-tippy" data-template="best-sort-2" data-placement="bottom" data-trigger="click" data-theme="eos-light" data-offset="0,10">
+                              За месяц<span class="ico icon-arrow-icon"></span>
+                            </div>
+
+                            <div id="best-sort-2" style="display: none">
+                              <ul class="sort-dropdown ui-dropdown-menu">
+                                <li><a href="#" class="active">За месяц</a></li>
+
+                                <li><a href="#">За год</a></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="block-content">
+                          <div class="ui-slider" id="js-best-slider">
+                            <div class="slider-container js-slider-container">
+                              <div class="slider-item">
+                                <a href="#" class="ui-human-card">
+                                  <div class="content">
+                                    <div class="ui-ava">
+                                      <img src="./image/tmp/ava4.png" alt="" />
+                                      <span class="ui-human-card__chat ico icon-chat"></span>
+                                    </div>
+
+                                    <div class="name">Роман Константинов</div>
+
+                                    <div class="position">Бухгалтер</div>
+                                  </div>
+
+                                  <div class="ui-label red">Лучший сотрудник</div>
+                                </a>
+                              </div>
+<div class="slider-item">
+                                <a href="#" class="ui-human-card">
+                                  <div class="content">
+                                    <div class="ui-ava">
+                                      <img src="./image/tmp/ava4.png" alt="" />
+                                      <span class="ui-human-card__chat ico icon-chat"></span>
+                                    </div>
+
+                                    <div class="name">Роман Константинов-Раскольников</div>
+
+                                    <div class="position">Бухгалтер</div>
+                                  </div>
+
+                                  <div class="ui-label red">Лучший сотрудник</div>
+                                </a>
+                              </div>
+<div class="slider-item">
+                                <a href="#" class="ui-human-card">
+                                  <div class="content">
+                                    <div class="ui-ava">
+                                      <img src="./image/tmp/ava4.png" alt="" />
+                                      <span class="ui-human-card__chat ico icon-chat"></span>
+                                    </div>
+
+                                    <div class="name">Роман Константинов</div>
+
+                                    <div class="position">Бухгалтер</div>
+                                  </div>
+
+                                  <div class="ui-label red">Лучший сотрудник</div>
+                                </a>
+                              </div>
+<div class="slider-item">
+                                <a href="#" class="ui-human-card">
+                                  <div class="content">
+                                    <div class="ui-ava">
+                                      <img src="./image/tmp/ava4.png" alt="" />
+                                      <span class="ui-human-card__chat ico icon-chat"></span>
+                                    </div>
+
+                                    <div class="name">Роман Константинов</div>
+
+                                    <div class="position">Бухгалтер</div>
+                                  </div>
+
+                                  <div class="ui-label red">Лучший сотрудник</div>
+                                </a>
+                              </div>
+<div class="slider-item">
+                                <a href="#" class="ui-human-card">
+                                  <div class="content">
+                                    <div class="ui-ava">
+                                      <img src="./image/tmp/ava4.png" alt="" />
+                                      <span class="ui-human-card__chat ico icon-chat"></span>
+                                    </div>
+
+                                    <div class="name">Роман Константинов</div>
+
+                                    <div class="position">Бухгалтер</div>
+                                  </div>
+
+                                  <div class="ui-label red">Лучший сотрудник</div>
+                                </a>
+                              </div>
+
+                            </div>
+
+                            <div class="slider-prev"><span class="ico icon-button-arrow"></span></div>
+                            <div class="slider-next"><span class="ico icon-button-arrow"></span></div>
+                          </div>
+                        </div>
+                      </div>
+
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</main>
+
+<div class="push-mess">
+  Сообщение отправлено успешно
+</div>
+
+
+</div>
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+<script src="./js/jquery.mask.min.js"></script>
+<script src="./lib/uikit/js/uikit.min.js"></script>
+<script src="./lib/uikit/js/uikit-icons.min.js"></script>
+
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/tiny.slider/tiny-slider.js"></script>
+<script src="./lib/fancybox/fancybox.umd.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+
+<script src="./lib/tippy/tippy_custom.js"></script>
+<script src="https://unpkg.com/@googlemaps/markerwithlabel/dist/index.min.js"></script>
+
+<script src="./js/common.js?1670792830168"></script>
+<script src="./js/init-add-script-logic.js?1670792830168"></script>
+<script src="./js/init-add-skill-logic.js?1670792830168"></script>
+<script src="./js/init-custom-selectmenu.js?1670792830168"></script>
+<script src="./js/init-compliance-questions-adding.js?1670792830168"></script>
+
+</body>
+</html>
+

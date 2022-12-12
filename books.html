@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ru" class="html">
+<head>
+<title>Page - Книжная полка</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="description" content="description">
+
+<link href="./css/preloader.css" type="text/css" rel="stylesheet">
+<script>
+  window.onload = function() {
+    document.body.classList.add('loaded_hiding');
+    window.setTimeout(function () {
+      document.body.classList.add('loaded');
+      document.body.classList.remove('loaded_hiding');
+    }, 1000);
+  }
+</script>
+
+<link href="./lib/icomoon/style.css?1670792830168" type="text/css" rel="stylesheet">
+<link href="./lib/uikit/css/uikit.min.css" type="text/css" rel="stylesheet">
+
+<link href="./lib/bootstrap/css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="./lib/tiny.slider/tiny-slider.css" type="text/css" rel="stylesheet">
+<link href="./lib/fancybox/fancybox.css" type="text/css" rel="stylesheet">
+
+<link rel="stylesheet" href="./css/ui-kit.css?1670792830168">
+<link rel="stylesheet" href="./css/common.css?1670792830168">
+</head>
+
+<body class="body" data-tour-step>
+<noscript><div class="noscript">Для полноценной работы сайта, необходимо включить JavaScript!</div></noscript>
+
+<script>
+(function() {
+  const xhr = new XMLHttpRequest();
+  xhr.open('GET', 'image/sprite.svg?1670792830168', true);
+  xhr.send();
+  xhr.onload = function() {
+    const div = document.createElement('div');
+    div.className = 'visually-hidden';
+    div.innerHTML = xhr.responseText;
+    document.body.insertBefore(div, document.body.childNodes[0]);
+  }
+})();
+</script>
+
+
+<div class="wrapper">
+  <div class="preloader js-preloader">
+  <div class="line">
+      <div class="content"></div>
+  </div>
+
+  <div class="content">
+      <img src="./image/logo.svg" alt="" title="">
+      <div class="desc">Загружаем данные...</div>
+  </div>
+</div>
+
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="left-controls">
+      <div class="hamburger js-aside-control">
+        <span class="icon-hamburger"></span>
+      </div>
+
+      <a href="/" class="logo">
+        <img src="./image/logo.svg" alt="" title="">
+      </a>
+    </div>
+
+    <div class="search">
+      <form action="#" class="search-form">
+        <input type="text" placeholder="Искать...">
+        <input type="submit" class="submit" value="Искать">
+      </form>
+    </div>
+
+
+    <div class="right-controls">
+        <div class="socials-links">
+          <a href="#" target="_blank" class="instagram">
+            <span class="ico icon-instagram"></span>
+          </a>
+
+          <a href="#" target="_blank" class="youtube">
+            <span class="ico icon-youtube"></span>
+          </a>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="personal-buttons">
+          <div class="item" data-tippy-content="Избранное" data-placement="bottom"  data-offset="0,8">
+            <div class="favorite" >
+                <span class="ico icon-fav"></span>
+            </div>
+          </div>
+
+          <div class="item" data-tippy-content="Поддержка" data-placement="bottom"  data-offset="0,8">
+              <div class="questions">
+                <span class="ico icon-question"></span>
+              </div>
+          </div>
+
+          <div class="item" data-tippy-content="Чат" data-placement="bottom" data-offset="0,8">
+            <div class="messages">
+              <span class="ico icon-chat"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sep"></div>
+
+        <div class="personal-card js-tippy" data-template="profile"  data-theme="eos-light" data-offset="0,-5">
+          <div class="ui-pic">
+            <img src="./image/tmp/avatar.png" class="avatar" alt="Аватар">
+          </div>
+
+          <div class="card-content">
+            <div class="name"><span>Томас Андерсон</span><span class="ico icon-caret"></span></div>
+            <div class="holiday">60 дней до отпуска</div>
+          </div>
+        </div>
+
+        <div id="profile"  style="display:none">
+          <ul class="profile-dropdown ui-dropdown-menu">
+              <li><a href="./profile.html">Моя страница</a></li>
+              <li><a href="#">Выйти</a></li>
+          </ul>
+        </div>
+
+      <div class="notifications">
+        <span class="ico icon-notification"></span>
+        <div class="count">22</div>
+      </div>
+
+    </div>
+  </header>
+  <!-- #HEADER -->
+
+  <!-- ASIDE -->
+  <aside class="ui-scrolling open" id="js-aside">
+    <ul class="aside-menu">
+      <li>
+        <a href="./index.html" >
+          <span class="ico icon-aside-main" data-tippy-content="Главная" data-placement="right" data-offset="0,8"></span>
+          <span class="menu-text">Главная</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./news.html">
+          <span class="ico icon-aside-news" data-tippy-content="Новости" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Новости</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="./contacts.html" >
+          <span class="ico icon-aside-contacts" data-tippy-content="Контакты" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Контакты</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-requests" data-tippy-content="Заявки" data-placement="right" data-offset="0,8"><span class="red-ico">3</span></span>
+
+          <span class="menu-text">Заявки<span class="red-ico">3</span></span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-documents" data-tippy-content="ЛНА/документы" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">ЛНА/документы</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-communities" data-tippy-content="Сообщества" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">
+            Банк идей
+            <span class="aside-label">Скоро</span>
+          </span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-store" data-tippy-content="EOS STORE" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">
+            EOS STORE
+            <span class="aside-label">Скоро</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sep"></div>
+
+    <a href="./university.html" class="university-button">
+      <span class="ico icon-aside-university" data-tippy-content="Университет" data-placement="right" data-offset="0,8"></span>
+      <span class="menu-text">Университет</span>
+    </a>
+
+    <div class="sep"></div>
+
+    <ul class="aside-menu">
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-projects" data-tippy-content="Мои проекты" data-placement="right" data-offset="0,8"></span>
+          <span class="menu-text">Мои проекты</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-schedule" data-tippy-content="Рабочий календарь" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Рабочий календарь</span>
+        </a>
+      </li>
+    </ul>
+
+    <div class="sep"></div>
+
+    <ul class="aside-menu">
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-about" data-tippy-content="О компании" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">О компании</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="#">
+          <span class="ico icon-aside-media" data-tippy-content="Фото и видео" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text">Фото и видео</span>
+        </a>
+      </li>
+
+      <li>
+        <ul class="aside-menu">
+          <li>
+            <a href="#">
+              <span class="ico icon-aside-branch" data-tippy-content="Филиалы" data-placement="right" data-offset="0,8"></span>
+
+              <span class="menu-text">Филиалы</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <span class="ico icon-aside-staff" data-tippy-content="Сотрудники" data-placement="right" data-offset="0,8"></span>
+
+              <span class="menu-text">Сотрудники</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="sep"></div>
+
+        <ul class="aside-menu">
+          <li>
+            <a href="#">
+              <span class="ico icon-aside-ideas" data-tippy-content="Сотрудники" data-placement="right" data-offset="0,8"></span>
+
+              <span class="menu-text">Доска идей</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+
+      <li class="js-menu-extended open" data-text="Развернуть">
+        <a href="javascript:void(0)">
+          <span class="ico icon-aside-extend js-extended-tippy" data-placement="right" data-offset="0,8"></span>
+
+          <span class="menu-text js-extended-text">Свернуть<span class="red-ico icon-caret"></span></span>
+        </a>
+      </li>
+    </ul>
+
+    <a class="callback-button js-callback" href="#modal-callback" data-bs-toggle="modal" data-tippy-content="Задайте вопрос" data-placement="right" data-offset="0,15"></a>
+  </aside>
+  <!-- #ASIDE -->
+
+  <!-- MODAL CALLBACK -->
+  
+  <div class="ui-modal modal fade" id="modal-callback" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+      <div class="ui-modal__block modal-content">
+        <button type="button" class="ui-modal__close" data-bs-dismiss="modal" aria-label="Close">
+          <svg><use xlink:href="#icn-close" /></svg>
+        </button>
+
+
+        <form action="#" class="callback-form">
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="topic">Кому хотите написать?</label>
+
+            <select name="" id="" class="ui-select">
+              <option default value="">Выберите адресата</option>
+              <option value="Генеральному директору">Генеральному директору</option>
+              <option value="Бухгалтерия">Бухгалтерия</option>
+            </select>
+          </div>
+
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="topic">Тема сообщения</label>
+
+            <input class="ui-input" type="text" id="topic" name="topic" placeholder="Укажите тему" />
+            <!-- класс error для ошибки -->
+          </div>
+
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="message">Текст сообщения</label>
+
+            <textarea class="ui-input" type="text" id="message" name="message" placeholder="Текст сообщения"></textarea>
+            <!-- класс error для ошибки -->
+          </div>
+
+          <div class="ui-input-block">
+            <label class="ui-input-label" for="forward">Кому ответить</label>
+
+            <input class="ui-input" type="text" id="forward" name="forward" placeholder="Укажите email" />
+            <!-- класс error для ошибки -->
+          </div>
+
+          <div class="ui-input-block">
+            <div class="ui-input-label">Приоритет сообщения</div>
+
+            <div class="radio-row">
+              <div class="ui-radio">
+                <input type="radio" id="prior1" name="priority" value="Неважно" />
+
+                <label for="prior1">Неважно</label>
+              </div>
+
+              <div class="ui-radio">
+                <input type="radio" id="prior2" name="priority" value="Средне" />
+
+                <label for="prior2">Средне</label>
+              </div>
+
+              <div class="ui-radio">
+                <input type="radio" id="prior3" name="priority" value="Важно" />
+
+                <label for="prior3">Важно</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="callback-row">
+            <label class="ui-ctl ui-ctl-file-btn ui-file">
+              <input type="file" class="ui-ctl-element" />
+
+              <div class="ui-ctl-label-text">Прикрепить файл</div>
+            </label>
+
+            <div class="ui-button2">Отправить сообщение</div>
+          </div>
+        </form>
+
+        <!--
+        <div class="success-callback">
+          <img src="./image/success.svg" alt="Успешно" />
+          <div class="title">Спасибо большое за&nbsp;сообщение! Мы&nbsp;постараемся ответить вам в&nbsp;ближайшее&nbsp;время</div>
+          <div class="ui-button2">понятно</div>
+        </div>
+        -->
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- #MODAL CALLBACK -->
+
+
+  <main class="page" id="content">
+    <div class="ui-block ui-tab-block">
+      <ul class="ui-tab">
+        <li><a href="./university.html" >Дашборд</a></li>
+        <li><a href="./university-programms.html" >Программы обучения</a></li>
+        <li><a href="./faq.html" >База знаний</a></li>
+        <li><a href="./books.html" class="active">Книжная полка</a></li>
+        <li><a href="#">Статистика</a></li>
+      </ul>
+    </div>
+
+
+    <div div class="books-block ui-block">
+      <div class="block-head">
+        <div class="ui-breadcrumbs ui-breadcrumbs--title ui-breadcrumbs--no-margin">
+          <ul>
+            <li><a href="./books.html">Книжная полка</a></li>
+            <li>Название категории</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="block-content">
+        <div class="books-block__list books-block__list--all row row-8">
+          <div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book1.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Психология</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book2.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Профессиональная литература</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book3.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Как лучше работать</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book1.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Психология</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book2.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Профессиональная литература</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book3.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Как лучше работать</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book1.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium illum nulla ullam, eaque quibusdam ipsum</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book2.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Профессиональная литература</strong>
+            </a>
+          </div>
+<div class="books-block__item col-4">
+            <a href="./books-full.html" class="books-short">
+              <figure class="books-short__figure">
+                <img src="./image/tmp/book3.jpg" alt="" class="books-short__figure-img">
+              </figure>
+
+              <strong class="books-short__title">Как лучше работать</strong>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+</div>
+
+
+<script src="./js/jquery-3.6.0.min.js"></script>
+<script src="./js/js.cookie.min.js"></script>
+<script src="./js/jquery.mask.min.js"></script>
+<script src="./lib/uikit/js/uikit.min.js"></script>
+<script src="./lib/uikit/js/uikit-icons.min.js"></script>
+
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/tiny.slider/tiny-slider.js"></script>
+<script src="./lib/fancybox/fancybox.umd.js"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+
+<script src="./lib/tippy/tippy_custom.js"></script>
+<script src="https://unpkg.com/@googlemaps/markerwithlabel/dist/index.min.js"></script>
+
+<script src="./js/common.js?1670792830168"></script>
+<script src="./js/init-add-script-logic.js?1670792830168"></script>
+<script src="./js/init-add-skill-logic.js?1670792830168"></script>
+<script src="./js/init-custom-selectmenu.js?1670792830168"></script>
+<script src="./js/init-compliance-questions-adding.js?1670792830168"></script>
+
+</body>
+</html>
+
